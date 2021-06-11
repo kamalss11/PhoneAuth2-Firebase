@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/style2.css">
+    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+    <title>Phone Authentication</title>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDVdGF7waQdY_SiZSI7OcAyXNDYrB9tIuE",
+            authDomain: "dojo-c2657.firebaseapp.com",
+            databaseURL: "https://dojo-c2657.firebaseio.com",
+            projectId: "dojo-c2657",
+            storageBucket: "dojo-c2657.appspot.com",
+            messagingSenderId: "789766035590",
+            appId: "1:789766035590:web:9b0bbf87ea30b2a5971907"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+</head>
+<body>
+    <div id="loads">
+        <div id="loader"></div>
+    </div>
+
+    <div class="wl">
+        <div class="logout">
+            <p class="wel">Welcome, <span id="usr"></span></p>
+            <div class="outbtn">
+                <button onclick="mainpage()">Main Page</button>
+                <button onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="forms">
+        <h2>Studio</h2>
+        <form method="POST" id="form">
+            <div class="field field-1">
+                <input type="text" id="name" class="inputs" placeholder="Name">
+                <p class="error"></p>
+            </div>
+
+            <div class="field field-1">
+                <input type="text" id="phone" class="inputs" placeholder="Phone">
+                <p class="error"></p>
+            </div>
+
+            <div class="field field-1">
+                <input type="text" id="price" class="inputs" placeholder="Price">
+                <p class="error"></p>
+            </div>
+
+            <div class="field field-1">
+                <input type="text" id="rate" class="inputs" placeholder="Rating">
+                <p class="error"></p>
+            </div>
+
+            <div class="field field-1">
+                <input type="text" id="service" class="inputs" placeholder="Services">
+                <p class="error"></p>
+            </div>
+
+            <div class="field field-1">
+                <input type="text" id="sts" class="inputs" placeholder="Status">
+                <p class="error"></p>
+            </div>
+
+            <div class="field field-1">
+                <textarea id="add" cols="30" rows="5" class="inputs" placeholder="Address"></textarea>
+                <p class="error"></p>
+            </div>
+
+            <div class="field field-1">
+                <input type="file" id="img" class="inputs" accept="image/">
+                <p class="error"></p>
+            </div>
+
+            <div class="btn">
+                <button type="submit" class="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="JS/studio.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries 
+    -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-storage.js"></script>
+</body>
+</html>
+

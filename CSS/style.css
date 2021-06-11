@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #e8f0fa;
+}
+
+#loads{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    overflow: hidden;
+}
+
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid #e7e6e6;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    animation: spin 2s linear infinite;
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.forms{
+    background: white;
+    padding: 15px 25px;
+    border-radius: 6px;
+    box-shadow: 0 0 15px rgba(0,0,0,.1);
+    width: 30%;
+    text-align: center;
+}
+
+.forms h2{
+    position: relative;
+    display: inline-block;
+    padding: 7px;
+    margin-bottom: 15px;
+}
+
+.forms h2::before{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: dodgerblue;
+}
+
+.forms input{
+    padding: 10px;
+    border-radius: 5px;
+    margin: 15px 0;
+    width: 100%;
+    border: 1px solid gray;
+    font-size: 15px;
+}
+
+.forms .btns{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.forms .btns button{
+    padding: 13px 15px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    background: dodgerblue;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.forms .btns button.otp.active,.forms .btns button.login.active{
+    background-color: rgb(204, 202, 202);
+    pointer-events: none;
+}
+
+.er{
+    display: none;
+}
+
+.er.active{
+    display: block;
+    color: red;
+    font-size: 12px;
+    text-align: left;
+}
+
+.forms #recaptcha-container div div{
+    margin: 15px auto !important;
+}
+
+@media(max-width: 900px){
+    .forms{
+        width: 80%;
+    }
+}

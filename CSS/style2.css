@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+
+#loads{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: white;
+    overflow: hidden;
+}
+
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid #e7e6e6;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    animation: spin 2s linear infinite;
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.wl{
+    text-align: right;
+    background: white;
+    box-shadow: 0 0 15px rgba(0,0,0,.2);
+    padding: 15px 10px;
+}
+
+.logout{
+    position: relative;
+    display: inline-block;
+}
+
+.logout .wel{
+    cursor: pointer;
+}
+
+.logout .wel{
+    font-size: 15px;
+}
+
+.logout .wel span{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.logout .outbtn{
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 180px;
+    z-index: 5;
+    background: white;
+    padding: 12px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0,0,0,.2);
+    display: none;
+}
+
+.logout .outbtn::before{
+    position: absolute;
+    content: '';
+    top: -20px;
+    right: 0;
+    transform: translateX(-50%);
+    border: solid 10px;
+    border-color: transparent transparent gray;
+}
+
+.logout .outbtn button{
+    width: 95%;
+    padding: 8px;
+    background: none;
+    border: none;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.logout .outbtn button:hover{
+    background-color: dodgerblue;
+    color: white;
+}
+
+.logout .outbtn.active{
+    display: block;
+}
+
+.tabs{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    text-align: center;
+}
+
+.tabs button{
+    background: none;
+    border: none;
+    margin: 0 9px;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.tabs button:hover{
+    color: white;
+    background: dodgerblue;
+}
+
+.forms{
+    margin: 50px auto;
+    width: 40%;
+    background: white;
+    box-shadow: 0 0 15px rgba(0,0,0,.2);
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+.forms h2{
+    margin: 15px 0;
+    text-align: center;
+}
+
+.forms .field{
+    margin: 20px 0;
+    width: 100%;
+}
+
+.forms .field input,.forms .field textarea{
+    width: 100%;
+    padding: 8px 10px;
+    border: none;
+    border-bottom: 1px solid rgb(184, 184, 184);
+    resize: none;
+    font-size: 15px;
+}
+
+.forms .field #img,.forms .field #pic{
+    border: none;
+}
+
+.forms .field .error,.forms .field .er{
+    font-size: 12px;
+    padding: 5px 5px 0;
+    color: red;
+    display: none;
+}
+
+.forms .field .error.active,.forms .field .er.active{
+    display: block;
+}
+
+.forms .btn{
+    margin: 15px 0;
+    text-align: center;
+}
+
+.forms .btn button{
+    padding: 8px 15px;
+    background-color: dodgerblue;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    pointer-events: auto;
+}
+
+.forms .btn button.hide{
+    pointer-events: none;
+    background-color: rgb(204, 202, 202);
+}
+
+@media(max-width: 950px){
+    .forms{
+        width: 90%;
+    }
+}

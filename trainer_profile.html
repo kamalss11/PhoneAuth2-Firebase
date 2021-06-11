@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="CSS/style2.css">
+        <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
+        <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+        <title>Phone Authentication</title>
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyDVdGF7waQdY_SiZSI7OcAyXNDYrB9tIuE",
+                authDomain: "dojo-c2657.firebaseapp.com",
+                databaseURL: "https://dojo-c2657.firebaseio.com",
+                projectId: "dojo-c2657",
+                storageBucket: "dojo-c2657.appspot.com",
+                messagingSenderId: "789766035590",
+                appId: "1:789766035590:web:9b0bbf87ea30b2a5971907"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+        </script>
+        <style>
+            .image{
+                text-align: center;
+            }
+
+            #img{
+                width: 250px;
+            }
+
+            .datas{
+                margin: 50px auto;
+                width: 60%;
+                padding: 15px;
+                background-color: white;
+                border-radius: 5px;
+                box-shadow: 0 0 15px rgba(0,0,0,.2);
+            }
+
+            .datas .data{
+                margin: 20px 0;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .datas .data span{
+                margin: 0 10px;
+            }
+            
+            .datas .data span:nth-child(1){
+                flex-basis: 50%;
+            }
+
+            @media(max-width: 600px){
+                #img{
+                    width: 200px;
+                }
+
+                .datas{
+                    margin: 50px auto;
+                    width: 90%;
+                }
+            }
+        </style>
+    </head>
+<body>
+    <div id="loads">
+        <div id="loader"></div>
+    </div>
+    
+    <div class="wl">
+        <div class="logout">
+            <p class="wel">Welcome, <span id="usr"></span></p>
+            <div class="outbtn">
+                <button onclick="mainpage()">Main Page</button>
+                <button onclick="editpro()">Edit Profile</button>
+                <button onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="datas">
+        <div class="image">
+            <img src="" id="img">
+        </div>
+
+        <div class="data">
+            <span>Name : </span> <span id="name"></span>
+        </div>
+
+        <div class="data">
+            <span>Id : </span> <span id="id"></span>
+        </div>
+
+        <div class="data">
+            <span>Gender : </span> <span id="ge"></span>
+        </div>
+
+        <div class="data">
+            <span>Phone : </span> <span id="phone"></span>
+        </div>
+
+        <div class="data">
+            <span>Email : </span> <span id="email"></span>
+        </div>
+
+        <div class="data">
+            <span>Price : </span> <span id="price"></span>
+        </div>
+
+        <div class="data">
+            <span>Experience : </span> <span id="exp"></span>
+        </div>
+
+        <div class="data">
+            <span>Ratings : </span> <span id="ratings"></span>
+        </div>
+
+        <div class="data">
+            <span>Category : </span> <span id="category"></span>
+        </div>
+
+        <div class="data">
+            <span>Speciality : </span> <span id="spe"></span>
+        </div>
+
+        <div class="data">
+            <span>Tags : </span> <span id="tag"></span>
+        </div>
+        
+        <div class="data">
+            <span>State : </span> <span id="stat"></span>
+        </div>
+
+        <div class="data">
+            <span>City : </span> <span id="city"></span>
+        </div>
+
+        <div class="data">
+            <span>Created : </span> <span id="created"></span>
+        </div>
+    </div>
+
+    <script src="JS/trainer_profile.js"></script>
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries 
+    -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-storage.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
+    <title>Phone Authentication</title>
+</head>
+<body>
+    <div id="loads">
+        <div id="loader"></div>
+    </div>
+
+    <div class="forms" id="bl" style="display: none;">
+        <h2>LOGIN</h2>
+        <form method="POST" id="form">
+            <input type="text" id="ph" required placeholder="Enter your Number"><br>
+            <p class="er"></p>
+            <input type="text" id="code" placeholder="Enter OTP">
+            <p class="er"></p>
+            <div id="recaptcha-container"></div>
+            <div class="btns">
+                <button onclick="phoneAuth()" class="otp">Send OTP</button>
+                <button onclick="verification()" class="login">Login</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="JS/js.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDVdGF7waQdY_SiZSI7OcAyXNDYrB9tIuE",
+            authDomain: "dojo-c2657.firebaseapp.com",
+            databaseURL: "https://dojo-c2657.firebaseio.com",
+            projectId: "dojo-c2657",
+            storageBucket: "dojo-c2657.appspot.com",
+            messagingSenderId: "789766035590",
+            appId: "1:789766035590:web:9b0bbf87ea30b2a5971907"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-auth.js"></script>
+</body>
+</html>

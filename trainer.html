@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/style2.css">
+    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+    <title>Phone Authentication</title>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDVdGF7waQdY_SiZSI7OcAyXNDYrB9tIuE",
+            authDomain: "dojo-c2657.firebaseapp.com",
+            databaseURL: "https://dojo-c2657.firebaseio.com",
+            projectId: "dojo-c2657",
+            storageBucket: "dojo-c2657.appspot.com",
+            messagingSenderId: "789766035590",
+            appId: "1:789766035590:web:9b0bbf87ea30b2a5971907"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+</head>
+<body>
+    <div id="loads">
+        <div id="loader"></div>
+    </div>
+
+    <div class="wl">
+        <div class="logout">
+            <p class="wel">Welcome, <span id="usr"></span></p>
+            <div class="outbtn">
+                <button onclick="mainpage()">Main Page</button>
+                <button onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="forms">
+        <h2>Trainer</h2>
+        <form method="POST" id="form2">
+            <div class="field field-2">
+                <input type="text" id="nam" class="inp" placeholder="Name">
+                <p class="er"></p>
+            </div>
+
+            <div class="field field-2">
+                <input type="text" id="gender" class="inp" placeholder="Gender">
+                <p class="er"></p>
+            </div>
+
+            <div class="field field-2">
+                <input type="text" id="email" class="inp" placeholder="Email">
+                <p class="er"></p>
+            </div>
+
+            <div class="field field-2">
+                <input type="text" id="ph" class="inp" placeholder="Phone">
+                <p class="er"></p>
+            </div>
+
+            <div class="field field-2">
+                <input type="text" id="pr" class="inp" placeholder="Price">
+                <p class="er"></p>
+            </div>
+
+            <div class="field field-2">
+                <input type="text" id="rat" class="inp" placeholder="Rating">
+                <p class="er"></p>
+            </div>
+
+            <div class="field field-2">
+                <input type="text" id="spe" class="inp" placeholder="Speciality">
+                <p class="er"></p>
+            </div>
+
+            <div class="field field-2">
+                <input type="text" id="cit" class="inp" placeholder="City">
+                <p class="er"></p>
+            </div>
+
+            <div class="field field-2">
+                <input type="text" id="ste" class="inp" placeholder="State">
+                <p class="er"></p>
+            </div>
+
+            <div class="field field-2">
+                <input type="text" id="exp" class="inp" placeholder="Experience">
+                <p class="er"></p>
+            </div>
+
+            <div class="field field-2">
+                <input type="text" id="tag" class="inp" placeholder="Tags">
+                <p class="er"></p>
+            </div>
+
+            <div class="field field-2">
+                <input type="text" id="cat" class="inp" placeholder="Category">
+                <p class="er"></p>
+            </div>
+
+            <div class="field field-2">
+                <input type="file" id="pic" class="inp" accept="image/">
+                <p class="er"></p>
+            </div>
+
+            <div class="btn">
+                <button type="submit" class="sub">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="JS/trainer.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries 
+    -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-storage.js"></script>
+</body>
+</html>
+
